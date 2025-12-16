@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCam Monitor Setup</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a3a3a 0%, #2a4a4a 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 500px;
+        }
+        
+        .logo {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #d4af37;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a3a3a;
+            padding: 20px 50px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .steps {
+            margin-top: 50px;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: left;
+        }
+        
+        .steps h3 {
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        .steps ol {
+            padding-left: 25px;
+        }
+        
+        .steps li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🐾</div>
+        <h1>PetCam Monitor</h1>
+        <p>Setup your old phone as a pet monitor</p>
+        
+        <a href="../downloads/petcam.apk" class="download-btn" id="downloadBtn" download>
+            📥 Download Monitor
+        </a>
+        
+        <div class="steps">
+            <h3>Setup Instructions:</h3>
+            <ol>
+                <li>Download and install PetCam</li>
+                <li>Open the app</li>
+                <li>App will connect automatically!</li>
+                <li>Done! 🎉</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('u');
+        const token = urlParams.get('t');
+        
+        if (userId && token) {
+            const deepLink = `petcam://monitor?user=${userId}&token=${token}`;
+            window.location.href = deepLink;
+            
+            setTimeout(() => {
+                localStorage.setItem('petcam_user', userId);
+                localStorage.setItem('petcam_token', token);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

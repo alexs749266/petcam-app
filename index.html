@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCam - Watch Your Pet Anytime</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1a3a3a 0%, #2a4a4a 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+        
+        p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #cccccc;
+            max-width: 600px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #d4af37;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a3a3a;
+            padding: 20px 50px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 12px;
+            margin-top: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #0d1d1d;
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            .logo { font-size: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo">🐾</div>
+        <h1>PetCam</h1>
+        <p>Turn your old phone into a smart pet camera with 2-way audio. Watch, talk to, and monitor your pets from anywhere.</p>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📹</div>
+                <h3>Live Video</h3>
+                <p>Watch in real-time</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎤</div>
+                <h3>2-Way Audio</h3>
+                <p>Talk to your pet</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔊</div>
+                <h3>Smart Alerts</h3>
+                <p>Motion & sound detection</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <h3>Free Forever</h3>
+                <p>No subscriptions</p>
+            </div>
+        </div>
+        
+        <a href="downloads/petcam.apk" class="download-btn" download>
+            📥 Download PetCam
+        </a>
+        
+        <p style="margin-top: 20px; font-size: 14px; color: #888;">
+            Android 8.0+ | Version 1.0
+        </p>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2024 PetCam by TAARS Systems LLC</p>
+        <p><a href="mailto:support@petcam.app">support@petcam.app</a></p>
+    </div>
+</body>
+</html>
